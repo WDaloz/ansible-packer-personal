@@ -3,12 +3,13 @@
     {
         "aws_acces_key": "",
         "aws_acces_secret":"",
-        "version": "",
-        "provisioner":
+        "version": ""
+    },
+        "provisioners":
         [
             {
-            "type": "ansible",
-            "playbook_file": "./playbook.yml"
+            	"type": "ansible",
+            	"playbook_file": "./playbook.yml"
             }
         ],
         "builders":
@@ -18,11 +19,11 @@
                 "access_key": "{{user `aws_access_key`}}",
                 "secret_key": "{{user `aws_secret_key`}}",
                 "region": "us-east-1",
-                "source_ami": "ami-063c52cca3daf7af2",
+                "source_ami": "ami-0ac019f4fcb7cb7e6",
                 "instance_type": "t2.micro",
                 "ssh_username": "ubuntu",
                 "ami_name": "packer_{{user `version`}}"
             }
         ]
-    }
+    
 }
