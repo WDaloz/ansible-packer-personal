@@ -7,8 +7,7 @@
       "provisioners": [
         {
           "type": "ansible",
-          "playbook_file": "./playbook.yml",
-          "extra_arguments": ["--extra-vars", "env={{user `env`}}"]
+          "playbook_file": "./playbook.yml"
         }
       ],
       "builders": [
@@ -16,11 +15,11 @@
           "type": "amazon-ebs",
           "access_key": "{{user `aws_access_key`}}",
           "secret_key": "{{user `aws_secret_key`}}",
-          "region": "us-west-2",
+          "region": "us-east-1",
           "source_ami": "ami-0ac019f4fcb7cb7e6",
           "instance_type": "t2.micro",
           "ssh_username": "ubuntu",
-          "ami_name": "{{user}}_packer_{{user `version`}}"
+          "ami_name": "2018_packer_{{user `version`}}"
         }
       ]
     
