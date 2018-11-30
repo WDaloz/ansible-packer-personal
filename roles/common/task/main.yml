@@ -1,7 +1,9 @@
 ---
-- name: Install dependencies
+- name: Install commons dependencies
   apt: name={{item}} state=present update_cache=yes
   with_items:
     - curl
     - htop
     - wget
+    - vim
+    - git
