@@ -25,5 +25,4 @@
       "ami_name": "2018_packer_{{user `version`}}"
     }
   ]
-    
 }
