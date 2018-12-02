@@ -1,6 +1,6 @@
 ---
 - name: Install modules
-  hosts: all
+  hosts: localhost
   remote_user: ubuntu
   become: yes
   become_method: sudo
