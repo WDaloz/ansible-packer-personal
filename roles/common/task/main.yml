@@ -5,11 +5,11 @@
 
 - name: Update APT package manager repositories cache
   become: true
-  apt:
+  apt-get:
     update_cache: yes
 
 - name: Install commons dependencies
-  apt: name={{item}} state=present update_cache=yes
+  apt-get: name={{item}} state=present update_cache=yes
   with_items:
     - tree
     - curl
