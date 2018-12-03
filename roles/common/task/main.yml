@@ -1,13 +1,8 @@
 ---
-- name: Update and upgrade apt packages
-  become: true
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400 #One day
-
 - name: Install commons dependencies
-  apt: name={{item}} update_cache=yes  state=latest
+  apt: name={{item}} state=present  update_cache=yes 
+  become: true
+  become_method: sudo
   with_items:
     - tree
     - curl
@@ -17,12 +12,4 @@
     - git
     - ansible
     - zip
-
-- name: Install commons wget
-  get_url: url=https://releases.hashicorp.com/packer/1.3.2/packer_1.3.2_linux_amd64.zip
-
-- name: Desempaquetando
-  unarchive:
-    src: packer_1.3.2_linux_amd64.zip
-    dest: /usr/local/bin/packer
-
+    - unzip
