@@ -19,7 +19,7 @@
       "access_key": "{{user `aws_access_key`}}",
       "secret_key": "{{user `aws_secret_key`}}",
       "region": "us-east-1",
-      "source_ami": "ami-01bbe152bf19d0289",
+      "source_ami": "ami-011b6930a81cd6aaf",
       "instance_type": "t2.micro",
       "ssh_username": "ec2-user",
       "ami_name": "2018_packer_{{user `version`}}"
