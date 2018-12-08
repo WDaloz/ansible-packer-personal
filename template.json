@@ -3,6 +3,7 @@
   {
     "aws_access_key": "",
     "aws_secret_key": "",
+    "name":"",
     "version": ""
   },
   "provisioners": 
@@ -19,10 +20,10 @@
       "access_key": "{{user `aws_access_key`}}",
       "secret_key": "{{user `aws_secret_key`}}",
       "region": "us-east-1",
-      "source_ami": "ami-009d6802948d06e52",
+      "source_ami": "ami-05a36d3b9aa4a17ac",
       "instance_type": "t2.micro",
-      "ssh_username": "ec2-user",
-      "ami_name": "2018_packer_{{user `version`}}"
+      "ssh_username": "ubuntu",
+      "ami_name": "{{name}}_{{user `version`}}"
     }
   ]
 }
