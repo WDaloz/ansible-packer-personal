@@ -3,14 +3,14 @@
   {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "name":"",
-    "version": ""
+    "version":""
   },
   "provisioners": 
   [
     {
       "type": "ansible",
-      "playbook_file": "./playbook.yml"
+      "playbook_file": "./playbook.yml",
+      "extra_arguments": ["--extra-vars", "env={{user `name`}}"]
     }
   ],
   "builders": 
