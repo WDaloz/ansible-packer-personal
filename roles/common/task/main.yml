@@ -1,8 +1,9 @@
 ---
+- name: Update yum package manager repositories cache
+  yum: update_cache=yes
+
 - name: Install commons dependencies
-  apt: name={{item}} state=present  update_cache=yes 
-  become: true
-  become_method: sudo
+  yum: name={{item}} state=present
   with_items:
     - tree
     - curl
@@ -10,6 +11,5 @@
     - wget
     - vim
     - git
-    - ansible
     - zip
     - unzip
