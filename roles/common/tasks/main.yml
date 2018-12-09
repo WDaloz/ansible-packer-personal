@@ -17,4 +17,4 @@
       - git
       - zip
       - unzip
-  state: present
+    state: present
