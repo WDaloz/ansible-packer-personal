@@ -1,6 +1,7 @@
 ---
-    
+
 - name: Install all modules
+  hosts: localhost
   roles:
     - common
     - docker
