@@ -3,6 +3,7 @@
   hosts: localhost
   remote_user: ubuntu
   become_method: sudo
+  become: yes
   roles:
     - common
-    - docker
+    #- docker

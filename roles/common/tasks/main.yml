@@ -1,6 +1,7 @@
 ---
 - name: Install commons dependencies
   apt:  
+    update_cache: yes
     name:
       - tree
       - curl
@@ -11,4 +12,3 @@
       - zip
       - unzip
     state: present
-    update_cache: yes
