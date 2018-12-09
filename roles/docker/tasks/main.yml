@@ -1,7 +1,6 @@
 ---
-  
 - name: Install Docker
-  apt: name=docker.io
+  apt: name=docker.io state=present update_cache=yes
 
 - name: Creater Docker group
   group: name=docker state=present

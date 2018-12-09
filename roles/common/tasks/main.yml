@@ -1,11 +1,4 @@
 ---
-
-- name: Update apt package manager repositories cache
-  apt: update_cache=yes
-
-- name: Upgrade installed packages
-  apt: upgrade=dist
-
 - name: Install commons dependencies
   apt:  
     name:
@@ -18,3 +11,4 @@
       - zip
       - unzip
     state: present
+    update_cache: yes
