@@ -7,7 +7,7 @@
   apt: upgrade=dist
 
 - name: Install commons dependencies
-  apt: name={{item}} state=present
+  apt: name={{item}} state=present update_cache=yes
   with_items:
     - tree
     - curl
@@ -16,4 +16,3 @@
     - vim
     - git
     - zip
-    - unzip
