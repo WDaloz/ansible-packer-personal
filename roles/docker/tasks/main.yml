@@ -7,4 +7,4 @@
   group: name=docker state=present
 
 - name: Add current user to Docker group
-  user: name="{{ USER }}" groups=docker append=yes
+  user: name="usermod" groups=docker append=yes
