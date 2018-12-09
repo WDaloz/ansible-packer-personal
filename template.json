@@ -1,20 +1,17 @@
 {
-  "variables": 
-  {
+  "variables": {
     "aws_access_key": "",
     "aws_secret_key": "",
-    "version":""
+    "version": ""
   },
-  "provisioners": 
-  [
+  "provisioners": [
     {
       "type": "ansible",
       "playbook_file": "./playbook.yml",
-      "extra_arguments": ["--extra-vars", "env={{user `name`}}"]
+      "extra_arguments": ["--extra-vars", "env={{user `env`}}"]
     }
   ],
-  "builders": 
-  [
+  "builders": [
     {
       "type": "amazon-ebs",
       "access_key": "{{user `aws_access_key`}}",
@@ -22,8 +19,8 @@
       "region": "us-east-1",
       "source_ami": "ami-0ac019f4fcb7cb7e6",
       "instance_type": "t2.micro",
-      "ssh_username": "ubuntu",
-      "ami_name": "{{user `name`}}_{{user `version`}}"
+      "ssh_username": "ec2-user",
+      "ami_name": "{{user `env`}}_packer_{{user `version`}}"
     }
   ]
 }
