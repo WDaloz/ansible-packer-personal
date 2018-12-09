@@ -7,4 +7,14 @@
   apt: upgrade=dist
 
 - name: Install commons dependencies
-  apt: name=[u'tree', u'curl', u'htop', u'wget', u'vim', u'git', u'zip', u'unzip'] state=present update_cache=yes
+  apt:  
+    name:
+      - tree
+      - curl
+      - htop
+      - wget
+      - vim
+      - git
+      - zip
+      - unzip
+  state: present
