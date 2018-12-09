@@ -1,14 +1,3 @@
 ---
 - name: Install commons dependencies
-  apt:  
-    update_cache: yes
-    name:
-      - tree
-      - curl
-      - htop
-      - wget
-      - vim
-      - git
-      - zip
-      - unzip
-    state: present
+  apt:  update_cache=yes name=nginx state=present
