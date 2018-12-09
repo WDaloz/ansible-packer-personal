@@ -1,9 +1,6 @@
 ---
+    
 - name: Install all modules
-  hosts: localhost
-  remote_user: ubuntu
-  become: yes
-  become_method: sudo
   roles:
     - common
     - docker
