@@ -1,4 +1,5 @@
 ---
+
 - name: Update apt package manager repositories cache
   apt: update_cache=yes
 

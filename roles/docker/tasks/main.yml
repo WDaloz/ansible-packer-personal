@@ -1,4 +1,5 @@
 ---
+  
 - name: Install Docker
   apt: name=docker.io
 
@@ -6,4 +7,4 @@
   group: name=docker state=present
 
 - name: Add current user to Docker group
-  user: name="{{ansible_ev.USER}}" groups=docker append=yes 
+  user: name="{{ansible_ev.USER}}" groups=docker append=yes
