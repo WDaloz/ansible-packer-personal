@@ -1,10 +1,11 @@
 ---
 
-- name: Update apt package manager repositories cache
-  apt: update_cache=yes
+#Comento estos, ya que no funcionan T_T
+#- name: Update apt package manager repositories cache
+#  apt: update_cache=yes
 
-- name: Upgrade installed packages
-  apt: upgrade=dist
+#- name: Upgrade installed packages
+ # apt: upgrade=dist
 
 - name: Install commons dependencies
   apt: name={{item}} state=present update_cache=yes
